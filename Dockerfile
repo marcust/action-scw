@@ -1,4 +1,4 @@
-FROM scaleway/cli:v2.9 as upstream
+FROM scaleway/cli:v2.9.0 as upstream
 
 FROM alpine:3.17
 
@@ -9,10 +9,10 @@ RUN apk add --no-cache curl \
     && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
 
 LABEL "name"="action-scw"
-LABEL "version"="2.6.2"
-LABEL "maintainer"="Jawher Moussa"
-LABEL "repository"="https://github.com/jawher/action-scw"
-LABEL "homepage"="https://github.com/jawher/action-scw"
+LABEL "version"="2.9.0"
+LABEL "maintainer"="Marcus More-Thiesen"
+LABEL "repository"="https://github.com/marcust/action-scw"
+LABEL "homepage"="https://github.com/marcust/action-scw"
 
 COPY entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
