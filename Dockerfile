@@ -1,4 +1,4 @@
-FROM scaleway/cli:v2.9.0 as upstream
+FROM scaleway/cli:2 as upstream
 
 FROM alpine:3.17
 
